@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f8f9fa, #e0f7fa);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+header {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #4a148c;
+  background: linear-gradient(45deg, #f87503, #07c0f4);
+  padding: 1rem 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+}
+
+.board-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 2rem; 
+}
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5vmin;
+  width: 60vmin;
+  height: 60vmin;
+  background: #ffffffdd;
+  padding: 1.5vmin;
+  border-radius: 2rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* Boxes */
+.box {
+  background: linear-gradient(145deg, #ffcc80, #e5f500);
+  border: none;
+  border-radius: 1rem;
+  font-size: 15vmin;
+  font-weight: bold;
+  color: #0ce90c;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s, box-shadow 0.2s;
+}
+
+.box:hover:not(:disabled) {
+  transform: scale(1.1);
+  background: linear-gradient(145deg, #bcf500, #05dafb);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.action-btn {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  color: #fff;
+  background: linear-gradient(135deg, #2196f3, #21cbf3);
+  border: none;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+}
+
+.action-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  background: linear-gradient(135deg, #21cbf3, #2196f3);
+}
+
+.msg-container {
+  margin-top: 2rem;
+  text-align: center;
+  background: #fff8e1;
+  padding: 2rem 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+#msg {
+  font-size: 2rem;
+  color: #d84315;
+  margin-bottom: 1.5rem;
+}
+
+.hide {
+  display: none;
+}
